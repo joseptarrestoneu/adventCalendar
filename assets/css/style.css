@@ -173,7 +173,6 @@ a {
   display: none;
 }
 
-
 @keyframes latidos {
   from { transform: none; }
   50% { transform: scale(.7); }
