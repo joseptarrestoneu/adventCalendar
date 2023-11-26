@@ -59,6 +59,7 @@ body {
   text-align: center;
   font-size: 2em;
   margin: .5em .5em 0;
+  color: white;
 }
 
 a {
@@ -164,6 +165,55 @@ a {
 .heart {
   color: red;
 }
+
+/* Pantalla retos */
+.calendarAdvent {
+  width: 100%;
+  height: 100vh;
+  background-color: #151412;
+}
+
+.title_calendar {
+  color: white;
+  font-size: 2em;
+  margin: 1em .5em;
+  text-align: start;
+}
+
+.title_calendar div:nth-child(2) {
+  font-size: .5em;
+  background-color: #dc3545;
+  margin: 1em .5em;
+  border-radius: 10px;
+  transform: rotate(5deg) translateY(15px);
+  box-shadow: #D83A3A 0px 8px 24px;
+}
+
+.title_calendar div .explicacio {
+  width: 90%;
+  height: 90%;
+  margin: 1em auto;
+}
+
+.title_day {
+  width: 35%;
+  margin: 0 auto;
+  padding-top: .4em;
+  padding-bottom: .3em;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #000;
+  color: #77A9FA;
+  font-style: italic;
+  font-size: 1.25em;
+  position: relative;
+  bottom: -300px;
+  z-index: 2;
+  transform: translateX(40px) rotate(-3deg);
+  box-shadow: #D83A3A 0px 4px 6px;
+}
+
+/* Generales */
 
 .desactive div {
   display: none;
