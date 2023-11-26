@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
             "En la Alemania protestante los niños encendían una vela todos los días de adviento. Éste será un calendario donde podreis evaluar vuestros conocimientos de Javascript, consistente en retos que debereis resolver. ¿Podreis esperar?",
             "In Protestant Germany, children lit a candle every day of Advent. This will be a calendar where you can evaluate your Javascript knowledge, consisting of challenges that you will have to solve.. Can you wait?"
         ]   ,
-        dayDescription: ["dies", "días", "days"]
+        dayDescription: ["dies", "días", "days"],
+        buttonAccess: ["Acceder. Vamos!", "Accedir, Som'hi!", "Entry. Come on!"],
     }
 
     // Seleccionar idioma
@@ -35,6 +36,9 @@ window.addEventListener("load", () => {
         
         // Insertar descripcion
         document.querySelector(".title2").innerText = dataInitial.descriptionCalendar[newPosition]
+    
+        // Insertar texto boton
+        document.querySelector(".button_access").firstElementChild.innerText = dataInitial.buttonAccess[newPosition]
     })
 
 
