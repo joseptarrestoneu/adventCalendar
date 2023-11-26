@@ -117,7 +117,7 @@ a {
 
 .foto {
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   z-index: -2;
   animation: latidos 6s infinite;
 }
