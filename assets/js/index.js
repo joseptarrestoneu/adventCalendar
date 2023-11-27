@@ -1,5 +1,271 @@
 window.addEventListener("load", () => {
 
+    const data = [
+        {
+            titleDay: 1,
+            dateDay: new Date('12/01/2023 7:00 AM'),
+            questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/1.svg",
+        },
+        {
+            titleDay: 2,
+            dateDay: new Date('12/02/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/2.svg",
+        },
+        {
+            titleDay: 3,
+            dateDay: new Date('12/03/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/3.svg",
+        },
+        {
+            titleDay: 4,
+            dateDay: new Date('12/04/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/4.svg",
+        },
+        {
+            titleDay: 5,
+            dateDay: new Date('12/05/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],response: "",
+            imgDay: "././img/gallery/fulls/5.svg",
+        },
+        {
+            titleDay: 6,
+            dateDay: new Date('12/06/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/6.svg",
+        },
+        {
+            titleDay: 7,
+            dateDay: new Date('12/07/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/7.svg",
+        },
+        {
+            titleDay: 8,
+            dateDay: new Date('12/08/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/8.svg",
+        },
+        {
+            titleDay: 9,
+            dateDay: new Date('12/09/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/9.svg",
+        },
+        {
+            titleDay: 10,
+            dateDay: new Date('12/10/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/10.svg",
+        },
+        {
+            titleDay: 11,
+            dateDay: new Date('12/11/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/11.svg",
+        },
+        {
+            titleDay: 12,
+            dateDay: new Date('12/12/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/12.svg",
+        },
+        {
+            titleDay: 13,
+            dateDay: new Date('12/13/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/13.svg",
+        },
+        {
+            titleDay: 14,
+            dateDay: new Date('12/14/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/14.svg",
+        },
+        {
+            titleDay: 15,
+            dateDay: new Date('12/15/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/15.svg",
+        },
+        {
+            titleDay: 16,
+            dateDay: new Date('12/16/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/16.svg",
+        },
+        {
+            titleDay: 17,
+            dateDay: new Date('12/17/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/17.svg",
+        },
+        {
+            titleDay: 18,
+            dateDay: new Date('12/18/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/18.svg",
+        },
+        {
+            titleDay: 19,
+            dateDay: new Date('12/19/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/19.svg",
+        },
+        {
+            titleDay: 20,
+            dateDay: new Date('12/20/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/20.svg",
+        },
+        {
+            titleDay: 21,
+            dateDay: new Date('12/21/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/21.svg",
+        },
+        {
+            titleDay: 22,
+            dateDay: new Date('12/22/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/22.svg",
+        },
+        {
+            titleDay: 23,
+            dateDay: new Date('12/23/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/23.svg",
+        },
+        {
+            titleDay: 24,
+            dateDay: new Date('12/24/2023 7:00 AM'),
+                        questionDay: [
+                "?",
+                "",
+                "",
+            ],
+            response: "",
+            imgDay: "././img/gallery/fulls/24.svg",
+        },
+    ]
+
     // Diccionario y titulos
     const dataInitial = {
         languages: ["ca","es","in"],
@@ -11,6 +277,11 @@ window.addEventListener("load", () => {
         ]   ,
         dayDescription: ["dies", "días", "days"],
         buttonAccess: ["Acceder. Vamos!", "Accedir, Som'hi!", "Entry. Come on!"],
+        descriptionAdventCalendar: [
+            "Cada dia els diferents dibuixos es tornaran de color i podreu accedir-hi, amb un repte de Javascript dins de cadascun i obtenint un regal per cada repte resolt.",
+            "Cada día los diferentes dibujos se colorearan y podreis acceder a ellos con un reto de Javascript dentro de cada uno y obteniendo un regalo para reto resuelto.",
+            "Every day the different drawings will be colored and you will be able to access them with a Javascript challenge inside each one and obtaining a gift for the challenge solved."
+        ]
     }
 
     // Seleccionar idioma
@@ -35,15 +306,39 @@ window.addEventListener("load", () => {
             
             // Insertar título
             document.querySelector(".title").innerText = dataInitial.titleCalendar[newPosition]
+            document.querySelector(".title_calendarAdvent").innerText = dataInitial.titleCalendar[newPosition]
             
             // Insertar descripcion
             document.querySelector(".title2").innerText = dataInitial.descriptionCalendar[newPosition]
+            document.querySelector(".explicacio").innerText = dataInitial.descriptionAdventCalendar[newPosition]
         
             // Insertar texto boton
             document.querySelector(".button_access").firstElementChild.innerText = dataInitial.buttonAccess[newPosition]
         }
-    })
 
+        // Acceder a pantalla del reto del dia seleccionado
+        if (event.target.classList.contains("imageDay")) {
+            if (event.target.parentNode.classList.contains("active_link")) {
+                let id = event.target.parentNode.getAttribute("id");
+                document.querySelector(".date").classList.remove("desactive")
+                document.querySelector(".date").classList.add("activeDay") 
+                let date = document.querySelector(".date")
+                document.querySelector(".calendarAdvent").classList.add("desactive")
+                date.classList.add("activeDay")
+                date.innerHTML = `
+                <img src="./img/gallery/fulls/${id}.svg" alt="">
+                <div class="first">
+                    <div class="question">${data[id-1].questionDay}</div>
+                </div>
+                <div class="second" id="${id}">
+                    <div class="question1 questions 1">
+                        <p class="title_date">${data[id-1].response}</p>
+                    </div>
+                </div>
+                `
+            } 
+        }
+    })
 
     // Cuenta atras
     let end = new Date('12/01/2023 6:00 PM');
@@ -87,5 +382,17 @@ window.addEventListener("load", () => {
         }
     }
     timer = setInterval(showRemaining, 1000);
+
+    // Activar i desactivar els links dels 24 dies del calendari 
+    let now = new Date()
+    let links = document.querySelectorAll(".title_day")
+    data.forEach((element, index) => {
+        links[index].innerText = element.dateDay.toLocaleDateString()
+        if (element.dateDay >= now ) {
+            links[index].nextElementSibling.classList.add("active")
+            links[index].parentElement.classList.remove("active_link")
+            links[index].parentElement.classList.add("desactive_link")
+        }
+    })
 
 });

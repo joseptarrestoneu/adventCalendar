@@ -30,6 +30,19 @@ body {
     font-family: 'Cutive', monospace;
 }
 
+.language_selector {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.language_selector img {
+  width: 16px;
+  height: 12px;
+}
+
 .inbox {
   display: flex;
   justify-content: center;
@@ -41,18 +54,6 @@ body {
   text-decoration: none;
 }
 
-.language_selector {
-  width: 100%;
-  height: 20px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.language_selector img {
-  width: 16px;
-  height: 12px;
-}
 
 .title {
   width: 100%;
@@ -166,18 +167,13 @@ a {
   color: red;
 }
 
-/* Pantalla retos */
-.calendarAdvent {
-  width: 100%;
-  height: 100vh;
-  background-color: #151412;
-}
+/* Pantalla lista de retos */
 
 .title_calendar {
   color: white;
   font-size: 2em;
   margin: 1em .5em;
-  text-align: start;
+  text-align: center;
 }
 
 .title_calendar div:nth-child(2) {
@@ -193,6 +189,35 @@ a {
   width: 90%;
   height: 90%;
   margin: 1em auto;
+}
+
+.calendar {
+  width: 100%;
+  padding: 2em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.day {
+  width: 100%;
+  height: 100%;
+  margin: 2m auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.day img {
+  width: 80%;
+  height: 100%;
+  margin: 1em auto;
+}
+
+.active {
+  filter: grayscale(100%);
 }
 
 .title_day {
@@ -211,6 +236,94 @@ a {
   z-index: 2;
   transform: translateX(40px) rotate(-3deg);
   box-shadow: #D83A3A 0px 4px 6px;
+}
+
+/* Pantall de reto del dia seleccionado */
+
+
+.date {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 4fr;
+}
+
+.date div, 
+.date p {
+  color: white;
+}
+
+.date img {
+  transform: scale(.8) rotate(15deg);
+}
+
+.first {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.first div {
+  width: 90%;
+  min-height: 70px;
+  background-color: #D83A3A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin: 0 auto;
+  box-shadow: #D83A3A 0px 8px 24px;
+  border-radius: 10px;
+  transform: rotate(-1deg);
+}
+
+.question {
+  text-align: center;
+}
+
+.second {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.second div {
+  width: 80%;
+  height: 70px;
+  margin: .5em auto;
+  background-color: #3DA591;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 10px;
+  box-shadow: #fff 0px 14px 15px, #fff 0px -2px 3px, #fff 0px 4px 6px, #fff 0px 2px 3px, #fff 0px -3px 5px;
+}
+
+.second div:nth-child(1) {
+  transform: rotate(10deg) translateX(10px);
+}
+
+.second div:nth-child(2) {
+  transform: rotate(-2deg) translatey(3px) translateX(-3px);
+}
+
+.second div:nth-child(3) {
+  transform: rotate(3deg) translatey(-4px) translateX(5px);
+}
+
+.second div p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Generales */
@@ -234,8 +347,6 @@ a {
   50% { transform: scale(1.5); }
   to { transform: none; }
 }
-
-body{background:#151412;;overflow:hidden;}
 
 @-moz-keyframes nieve{	
 	from{top:-40px;}
@@ -345,12 +456,12 @@ body{background:#151412;;overflow:hidden;}
  
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    .clock {
+    /* .clock {
       display: block;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-    }
+    } */
   }
   
   /* X-Large devices (large desktops, 1200px and up) */
