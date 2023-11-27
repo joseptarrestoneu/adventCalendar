@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
         {
             titleDay: 2,
             dateDay: new Date('12/02/2023 7:00 AM'),
-                        questionDay: [
+            questionDay: [
                 "?",
                 "",
                 "",
