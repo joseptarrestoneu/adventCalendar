@@ -18,27 +18,30 @@ window.addEventListener("load", () => {
     let newPosition = 1;
     let image;
     document.addEventListener("click", (event) => {
-        position = event.target.id
-        if (position == 0) {
-            newPosition = 1;
-            image = `<img src="https://flagcdn.com/16x12/es.png" alt="Español" id="${newPosition}" class="languages"></img>`
-        } else if (position == 1) {
-            newPosition = 2;
-            image = `<img src="https://flagcdn.com/16x12/gb.png" alt="Inglés" id="${newPosition}" class="languages"></img>`
-        } else if (position == 2) {
-            newPosition = 0;
-            image = `<img src="./img/gallery/thumbs/bandera catalana.png" alt="Català" id="${newPosition}" class="languages"></img>`
+        // Actuar solamente si hacemos click en el icono del lenguaje        
+        if (event.target.classList.contains("languages")) {
+            position = event.target.id
+            if (position == 0) {
+                newPosition = 1;
+                image = `<img src="https://flagcdn.com/16x12/es.png" alt="Español" id="${newPosition}" class="languages"></img>`
+            } else if (position == 1) {
+                newPosition = 2;
+                image = `<img src="https://flagcdn.com/16x12/gb.png" alt="Inglés" id="${newPosition}" class="languages"></img>`
+            } else if (position == 2) {
+                newPosition = 0;
+                image = `<img src="./img/gallery/thumbs/bandera catalana.png" alt="Català" id="${newPosition}" class="languages"></img>`
+            }
+            document.querySelector(".language_selector").innerHTML = image
+            
+            // Insertar título
+            document.querySelector(".title").innerText = dataInitial.titleCalendar[newPosition]
+            
+            // Insertar descripcion
+            document.querySelector(".title2").innerText = dataInitial.descriptionCalendar[newPosition]
+        
+            // Insertar texto boton
+            document.querySelector(".button_access").firstElementChild.innerText = dataInitial.buttonAccess[newPosition]
         }
-        document.querySelector(".language_selector").innerHTML = image
-        
-        // Insertar título
-        document.querySelector(".title").innerText = dataInitial.titleCalendar[newPosition]
-        
-        // Insertar descripcion
-        document.querySelector(".title2").innerText = dataInitial.descriptionCalendar[newPosition]
-    
-        // Insertar texto boton
-        document.querySelector(".button_access").firstElementChild.innerText = dataInitial.buttonAccess[newPosition]
     })
 
 
