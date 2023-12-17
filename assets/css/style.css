@@ -243,11 +243,11 @@ a {
 
 .date {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr 4fr;
+  grid-template-rows: 2fr 2fr 1fr;
 }
 
 .date div, 
@@ -271,7 +271,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0 auto;
   box-shadow: #D83A3A 0px 8px 24px;
   border-radius: 10px;
@@ -283,47 +283,12 @@ a {
 }
 
 .second {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 auto;
-}
-
-.second div {
-  width: 80%;
-  height: 70px;
-  margin: .5em auto;
-  background-color: #3DA591;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1em;
-  border-radius: 10px;
-  box-shadow: #fff 0px 14px 15px, #fff 0px -2px 3px, #fff 0px 4px 6px, #fff 0px 2px 3px, #fff 0px -3px 5px;
-}
-
-.second div:nth-child(1) {
-  transform: rotate(10deg) translateX(10px);
-}
-
-.second div:nth-child(2) {
-  transform: rotate(-2deg) translatey(3px) translateX(-3px);
-}
-
-.second div:nth-child(3) {
-  transform: rotate(3deg) translatey(-4px) translateX(5px);
-}
-
-.second div p {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Generales */

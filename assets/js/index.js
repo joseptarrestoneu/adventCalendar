@@ -3,35 +3,35 @@ window.addEventListener("load", () => {
     const data = [
         {
             titleDay: 1,
-            dateDay: new Date('12/01/2023 7:00 AM'),
+            dateDay: new Date('11/01/2023 7:00 AM'),
             questionDay: [
-                "?",
-                "",
-                "",
+                "Comencem! Un amic nostre que treballa com a escriptor ha rebut l'encàrrec d'un relat curt i li paguen per lletres escrites i ens ha demanat un algorisme que permeti controlar el nombre de lletres en un text. Per provar-ho ens ha passat un fitxer amb lletres per comprovar que l'algortim funciona. Només ell sap el nombre de lletres que ha escrit. Quantes lletres hi ha?",
+                "Empezamos! Un amigo nuestro que trabaja com escritor ha recibo el encargo de un relato corto y le pagan por letras escritas y nos ha pedido un algoritmo que le permita controlar el número de letras en un texto. Para provarlo nos ha pasado un archivo con letras para comprovar que el algortimo funciona. Solo el sabe el numero de letras que ha escrito. Cuantas letras hay?",
+                "Let's start! A friend of ours who works as a writer has been commissioned to write a short story and is paid for letters written and has asked us for an algorithm that allows him to control the number of letters in a text. To test it, he has sent us a file with letters to verify that the algorithm works. Only he knows the number of letters he has written. How many letters are there?",
             ],
-            response: "",
+            response: 100000,
             imgDay: "././img/gallery/fulls/1.svg",
         },
         {
             titleDay: 2,
             dateDay: new Date('12/02/2023 7:00 AM'),
             questionDay: [
-                "?",
-                "",
-                "",
+                "El nostre amic ha aconseguit millorar el seu tracte amb l'editorial que publicarà el llibre i a més de pagar-lo per lletres també li pagarà per paraula. Ens ha demanat un algorisme que calculi les lletres i paraules d'un text. Hem d'introduir el nombre de lletres i el nombre de paraules separades per un guió (Exemple: 989-100)",
+                "Nuestro amigo ha conseguido mejorar su trato con la editorial que publicará su libro y ademas de pagarle por letras tambien le pagará por palabra. Nos ha pedido un algoritmo que calcule las letras y las palabras de un texto. Tenemos que introducir el número de letras y el número de palabras separadas por un guion (Ejemplo: 989-100)",
+                "Our friend has managed to improve his deal with the publisher that will publish his book and in addition to paying him for letters he will also pay him per word. He has asked us for an algorithm that calculates the letters and words in a text. We have to enter the number of letters and the number of words separated by a hyphen (Example: 989-100)",
             ],
-            response: "",
+            response: "492500-98500",
             imgDay: "././img/gallery/fulls/2.svg",
         },
         {
             titleDay: 3,
             dateDay: new Date('12/03/2023 7:00 AM'),
                         questionDay: [
-                "?",
-                "",
-                "",
+                "Carai amb el nostre amic! Ha tornat a aconseguir millorar el seu contracte i segons el tipus de paraula que aparegui en si el text pot cobrar més. Ens ha demanat un algorisme que permeti saber el nombre de vegades que apareix una paraula. A partir del text que ens ha passat ens demana que li diguem quantes vegades apareix la paraula 'oveja'.",
+                "Carai con nuestro amigo! Ha vuelto a conseguir mejorar su contrato y segun el tipo de palabra que aparezca en si su texto puede cobrar mas. Nos ha pedido un algoritmo que le permita saber el número de veces que aparece una palabra. A partir del texto que nos ha pasado nos pide que le digamos cuantas veces aparece la palabra 'oveja'.",
+                "Wow with our friend! He has once again managed to improve his contract and depending on the type of word that appears in his text he can charge more. You have asked us for an algorithm that allows you to know the number of times a word appears. Based on the text he has given us, he asks us to tell him how many times the word 'oveja' appears.",
             ],
-            response: "",
+            response: 14,
             imgDay: "././img/gallery/fulls/3.svg",
         },
         {
@@ -256,7 +256,7 @@ window.addEventListener("load", () => {
         {
             titleDay: 24,
             dateDay: new Date('12/24/2023 7:00 AM'),
-                        questionDay: [
+            questionDay: [
                 "?",
                 "",
                 "",
@@ -288,6 +288,7 @@ window.addEventListener("load", () => {
     let position = 1;
     let newPosition = 1;
     let image;
+    let id;
     document.addEventListener("click", (event) => {
         // Actuar solamente si hacemos click en el icono del lenguaje        
         if (event.target.classList.contains("languages")) {
@@ -314,12 +315,16 @@ window.addEventListener("load", () => {
         
             // Insertar texto boton
             document.querySelector(".button_access").firstElementChild.innerText = dataInitial.buttonAccess[newPosition]
+        
+            // Insertar texto a cada pregunta
+            document.querySelector(".question").innerText = data[id-1].questionDay[newPosition]
+        
         }
 
         // Acceder a pantalla del reto del dia seleccionado
         if (event.target.classList.contains("imageDay")) {
             if (event.target.parentNode.classList.contains("active_link")) {
-                let id = event.target.parentNode.getAttribute("id");
+                id = event.target.parentNode.getAttribute("id");
                 document.querySelector(".date").classList.remove("desactive")
                 document.querySelector(".date").classList.add("activeDay") 
                 let date = document.querySelector(".date")
@@ -328,12 +333,11 @@ window.addEventListener("load", () => {
                 date.innerHTML = `
                 <img src="./img/gallery/fulls/${id}.svg" alt="">
                 <div class="first">
-                    <div class="question">${data[id-1].questionDay}</div>
+                    <div class="question">${data[id-1].questionDay[newPosition]}</div>
                 </div>
-                <div class="second" id="${id}">
-                    <div class="question1 questions 1">
-                        <p class="title_date">${data[id-1].response}</p>
-                    </div>
+                <div class="second"">
+                    <input type="text">
+                    <div class="button_question">Comprovar</div>
                 </div>
                 `
             } 
